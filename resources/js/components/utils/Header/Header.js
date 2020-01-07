@@ -3,7 +3,7 @@ import {
     Link
 } from 'react-router-dom'
 
-const Header = ({ activePath, routes }) => {
+const Header = ({ activePath, routes, onPathChange }) => {
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
             <Link to="/" className="navbar-brand">Task</Link>
@@ -17,7 +17,7 @@ const Header = ({ activePath, routes }) => {
                     {routes && routes.map((route, i) => {
                         return (
                             <li key={`header-url-${i}`} className={route.path === activePath ? "nav-item active" : "nav-item"}>
-                                <Link to={route.path} className="nav-link" >{route.name}</Link>
+                                <Link to={route.path} onClick={() => onPathChange(route.path) } className="nav-link" >{route.name}</Link>
                             </li>
                         )
                     })}
