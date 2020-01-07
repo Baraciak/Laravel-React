@@ -75731,13 +75731,15 @@ __webpack_require__.r(__webpack_exports__);
 
 var Post = function Post(_ref) {
   var postData = _ref.postData;
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", {
+    className: "ml-1 text-secondary"
+  }, "User: ", postData.userId), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "card"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "card-header"
   }, postData.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "card-body"
-  }, postData.body));
+  }, postData.body)));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Post);

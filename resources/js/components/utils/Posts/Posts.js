@@ -18,7 +18,8 @@ class Posts extends Component {
                 <section className="jumbotron text-left">
                     <div className="container">
                         <h1>Posts List</h1>
-                        {postsFetched 
+                        {
+                        postsFetched 
                         ? posts.map(postData => <Post key={postData.id} postData={postData} />)
                         : <p>Loading...</p>
                         }
